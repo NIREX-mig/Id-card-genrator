@@ -52,7 +52,7 @@ export default function Preview() {
                         <img src={cardData?.image} alt="ID Photo" className="object-cover mx-auto" />
                     </div>
 
-                    <div className="w-2/3 px-4 flex flex-col justify-between">
+                    <div className="w-2/3 px-4 flex flex-col">
                         <div>
                             <h2 className="text-xl font-semibold text-gray-800">{cardData?.name}</h2>
                             <p className="text-md text-black">
@@ -62,6 +62,12 @@ export default function Preview() {
                             <p className="text-black text-md">
                                 <span>माता : </span>
                                 <span>{cardData?.motherName}</span>
+                            </p>
+                        </div>
+                        <div>
+                        <p className="text-black text-md">
+                                <span>पता : </span>
+                                <span>{cardData?.address}</span>
                             </p>
                         </div>
                         <div>
