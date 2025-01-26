@@ -21,6 +21,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   fatherName: z.string().min(2, "Father's name must be at least 2 characters"),
   motherName: z.string().min(2, "Mother's name must be at least 2 characters"),
+  address : z.string().min(2, "address must be at least 2 characters"),
   mobileNumber1: z.string().min(10, "Mobile number must be 10 digits"),
   mobileNumber2: z.string().min(10, "Mobile number must be 10 digits"),
 });
@@ -36,6 +37,7 @@ export default function Home() {
       image: "",
       name: "",
       fatherName: "",
+      address: "",
       motherName: "",
       mobileNumber1: "",
       mobileNumber2: "",
@@ -123,6 +125,19 @@ export default function Home() {
                     <FormLabel>Mother's Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter mother's name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+                control={form.control}
+                name="address"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>address</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter address" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
